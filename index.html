@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uma Laserworks - Terms & Privacy</title>
+  <title>Uma Laserworks</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff3e6;
-      color: #333;
+      background-color: #f9f9f9;
     }
 
     header {
-      background-color: #b30000;
+      background-color: #111;
       color: white;
       padding: 10px 0;
     }
@@ -53,57 +52,39 @@
       font-weight: bold;
     }
 
-    main {
+    .hero {
+      background-color: #e6e6e6;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .about, .services {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #b30000;
-    }
-
-    h2 {
+    .about h2, .services h2 {
       font-size: 2em;
-      margin-top: 40px;
-      margin-bottom: 15px;
-      color: #b30000;
+      color: #333;
     }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .btn-container {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      font-size: 1em;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #28a745;
-      color: white;
-    }
-
-    .reject {
-      background-color: #dc3545;
-      color: white;
+    .services ul {
+      padding-left: 20px;
     }
 
     footer {
-      background-color: #b30000;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 20px;
@@ -116,42 +97,48 @@
   <header>
     <div class="container">
       <div class="logo">
-        <img src="logo of uma laserworks.png" alt="Uma Laserworks Logo" id="logo" />
+        <!-- Placeholder for Logo -->
+        <img src="logo.png" alt="Uma Laserworks Logo" id="logo" />
       </div>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="terms.html">Terms</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <h1>Terms and Conditions</h1>
-    <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
-    <p>All content provided on this website is for informational purposes only. Uma Laserworks makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
-    <p>We reserve the right to make changes to these terms at any time. Your continued use of the site after such changes will constitute acknowledgment and acceptance of the modified terms and conditions.</p>
-    <p>Any personal information provided to us will be handled in accordance with our Privacy Policy.</p>
-
-    <h2>Privacy Policy</h2>
-    <p>Uma Laserworks values your privacy. We only collect personal information that is necessary to provide you with our services. This may include your name, contact information, and any other information you provide through our contact or service forms.</p>
-    <p>Your information will not be shared with third parties except as required by law or with your consent. We implement appropriate security measures to protect your data.</p>
-    <p>By using this site, you consent to the terms outlined in this privacy policy.</p>
-
-    <div class="btn-container">
-      <button class="btn accept" onclick="window.location.href='home.html'">Accept</button>
-      <button class="btn reject" onclick="alert('You must accept the terms to continue.')">Reject</button>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Precision in Every Cut</h1>
+      <p>Welcome to Uma Laserworks. We deliver top-tier laser cutting and engraving services for all your industrial and creative needs.</p>
     </div>
-  </main>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Uma Laserworks is committed to providing high-precision laser services using the latest technology and skilled craftsmanship. We serve a wide range of industries and clients with dedication and excellence.</p>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Laser Cutting</li>
+      <li>Engraving on Metal, Wood, and Acrylic</li>
+      <li>Customized Industrial Components</li>
+      <li>Bulk Orders for Manufacturers</li>
+    </ul>
+  </section>
 
   <footer>
     <p>&copy; 2025 Uma Laserworks. All rights reserved.</p>
   </footer>
 
   <script>
+    // Placeholder: dynamically change logo src if needed in future
     document.getElementById("logo").src = "logo of uma laserworks.png";
   </script>
 </body>
