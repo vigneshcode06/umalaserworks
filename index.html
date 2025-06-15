@@ -7,16 +7,25 @@
   <title>Uma Laserworks</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    :root {
+      --color-one: #fef6f2;
+      --color-two: #f7e2e0;
+      --color-three: #3b0a0a;
+      --text-color: #2c2c2c;
+      --bg-color: #fffdfd;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     header {
-      background-color: #111;
-      color: white;
+      background-color: var(--color-three);
+      color: var(--color-one);
       padding: 10px 0;
     }
 
@@ -47,13 +56,18 @@
     }
 
     nav ul li a {
-      color: white;
+      color: var(--color-one);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--color-two);
     }
 
     .hero {
-      background-color: #e6e6e6;
+      background-color: var(--color-two);
       padding: 60px 20px;
       text-align: center;
     }
@@ -61,31 +75,43 @@
     .hero h1 {
       margin: 0;
       font-size: 2.5em;
+      color: var(--color-three);
     }
 
     .hero p {
       font-size: 1.2em;
       margin-top: 10px;
+      color: var(--text-color);
     }
 
     .about, .services {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
+      background-color: var(--color-one);
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .about h2, .services h2 {
       font-size: 2em;
-      color: #333;
+      color: var(--color-three);
+      border-bottom: 2px solid var(--color-three);
+      padding-bottom: 10px;
     }
 
     .services ul {
       padding-left: 20px;
     }
 
+    .services li {
+      margin: 10px 0;
+    }
+
     footer {
-      background-color: #111;
-      color: white;
+      background-color: var(--color-three);
+      color: var(--color-one);
       text-align: center;
       padding: 20px;
       margin-top: 40px;
@@ -97,7 +123,6 @@
   <header>
     <div class="container">
       <div class="logo">
-        <!-- Placeholder for Logo -->
         <img src="logo.png" alt="Uma Laserworks Logo" id="logo" />
       </div>
       <nav>
@@ -138,7 +163,6 @@
   </footer>
 
   <script>
-    // Placeholder: dynamically change logo src if needed in future
     document.getElementById("logo").src = "logo of uma laserworks.png";
   </script>
 </body>
