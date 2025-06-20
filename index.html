@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     :root {
-      --color-one: #fef6f2;
-      --color-two: #f7e2e0;
-      --color-three: #3b0a0a;
-      --text-color: #2c2c2c;
-      --bg-color: #fffdfd;
+      --color-one: #ffffff;
+      --color-two: #d9d9d9;
+      --color-three: #000000;
+      --text-color: #2b2b2b;
+      --bg-color: #f0f0f0;
     }
 
     body {
@@ -21,6 +21,12 @@
       padding: 0;
       background-color: var(--bg-color);
       color: var(--text-color);
+      background-image: url('./logo\ of\ uma\ laserworks.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: 400px;
+      background-blend-mode: lighten;
     }
 
     header {
@@ -42,6 +48,10 @@
       width: 100px;
       height: 50px;
       object-fit: contain;
+      background-color: rgba(255, 255, 255, 0.778);
+
+      box-shadow:inset;
+      border-radius: 15px;
     }
 
     nav ul {
@@ -66,46 +76,42 @@
       color: var(--color-two);
     }
 
-    .hero {
-      background-color: var(--color-two);
+    .main-content {
       padding: 60px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: var(--color-three);
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: var(--text-color);
-    }
-
-    .about, .services {
-      padding: 40px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       background-color: var(--color-one);
       border-radius: 10px;
-      margin-top: 20px;
+      margin-top: 40px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    .about h2, .services h2 {
-      font-size: 2em;
+    .main-content h1 {
+      font-size: 2.5rem;
+      color: var(--color-three);
+    }
+
+    .main-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
       color: var(--color-three);
       border-bottom: 2px solid var(--color-three);
       padding-bottom: 10px;
+      margin-top: 40px;
     }
 
-    .services ul {
+    .main-content ul {
+      list-style: disc;
       padding-left: 20px;
+      text-align: left;
     }
 
-    .services li {
+    .main-content ul li {
       margin: 10px 0;
     }
 
@@ -116,6 +122,60 @@
       padding: 20px;
       margin-top: 40px;
     }
+
+.carousel-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: fit-content;
+}
+
+.carousel-image {
+  width: calc(100% / 3);
+  max-width: 300px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
   </style>
 </head>
 
@@ -123,11 +183,11 @@
   <header>
     <div class="container">
       <div class="logo">
-        <img src="logo.png" alt="Uma Laserworks Logo" id="logo" />
+        <img src="logo of uma laserworks.png" alt="Uma Laserworks Logo" id="logo" />
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="terms.html">Terms</a></li>
@@ -136,31 +196,93 @@
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Precision in Every Cut</h1>
-      <p>Welcome to Uma Laserworks. We deliver top-tier laser cutting and engraving services for all your industrial and creative needs.</p>
-    </div>
-  </section>
+  <main class="main-content">
+    <h1>Welcome to Uma Laserworks</h1>
+    <p>We specialize in precision laser cutting services for a wide range of industries and applications. Our commitment to quality, innovation, and customer satisfaction sets us apart. Whether you're looking for intricate designs or industrial-scale production, Uma Laserworks is your trusted partner for excellence in laser solutions.</p>
 
-  <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>Uma Laserworks is committed to providing high-precision laser services using the latest technology and skilled craftsmanship. We serve a wide range of industries and clients with dedication and excellence.</p>
-  </section>
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>At Uma Laserworks, we are driven by a passion for precision and a commitment to excellence. Specializing in high-precision laser services, we leverage state-of-the-art technology and advanced techniques to deliver superior results across a wide range of materials and applications.
 
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Laser Cutting</li>
-      <li>Engraving on Metal, Wood, and Acrylic</li>
-      <li>Customized Industrial Components</li>
-      <li>Bulk Orders for Manufacturers</li>
-    </ul>
-  </section>
+Our team of experienced professionals combines technical expertise with skilled craftsmanship to ensure each project is executed with the utmost accuracy and attention to detail. From intricate custom designs to large-scale industrial solutions, we tailor our services to meet the unique needs of every client.
+
+With a strong focus on quality, reliability, and customer satisfaction, Uma Laserworks proudly serves diverse industries—including manufacturing, engineering, architecture, and creative design. Our goal is not just to meet expectations, but to exceed them—delivering results that reflect innovation, efficiency, and a deep understanding of our clients' requirements.
+
+Partner with Uma Laserworks and experience the perfect blend of technology, precision, and personalized service..</p>
+      <div class="carousel-wrapper">
+  <div class="carousel-track">
+    <!-- Dynamically add 15 images -->
+    <img src="001.jpg" class="carousel-image" />
+    <img src="002.jpg" class="carousel-image" />
+    <img src="003.jpg" class="carousel-image" />
+    <img src="004.jpg" class="carousel-image" />
+    <img src="005.jpg" class="carousel-image" />
+    <img src="006.jpg" class="carousel-image" />
+    <img src="007.jpg" class="carousel-image" />
+    <img src="008.jpg" class="carousel-image" />
+    <img src="009.jpg" class="carousel-image" />
+    <img src="010.jpg" class="carousel-image" />
+    <img src="011.jpg" class="carousel-image" />
+    <img src="012.jpg" class="carousel-image" />
+    <img src="013.jpg" class="carousel-image" />
+    <img src="014.jpg" class="carousel-image" />
+    <img src="015.jpg" class="carousel-image" />
+  </div>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+</div>
+
+    </section>
+
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Laser Cutting</li>
+        <li>Engraving on Metal, Wood, and Acrylic</li>
+        <li>Customized Industrial Components</li>
+        <li>Bulk Orders for Manufacturers</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Uma Laserworks. All rights reserved. | <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Privacy Policy</a></p>
   </footer>
+
+  <script>
+    document.getElementById("logo").src = "logo of uma laserworks.png";
+    
+      const track = document.querySelector(".carousel-track");
+      const slides = document.querySelectorAll(".carousel-image");
+      const prevBtn = document.querySelector(".carousel-btn.prev");
+      const nextBtn = document.querySelector(".carousel-btn.next");
+
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+
+      function updateCarousel() {
+        const slideWidth = slides[0].clientWidth;
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+
+      // Optional: Auto slide every 5 seconds
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      }, 5000);
+</script>
+
+  
 </body>
 
 </html>
